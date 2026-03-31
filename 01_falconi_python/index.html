@@ -1,0 +1,4506 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentações técnicas dos projetos e automações da área">
+      
+      
+        <meta name="author" content="Área de Dados">
+      
+      
+      
+        <link rel="prev" href="../relatorio_area_dados/">
+      
+      
+        <link rel="next" href="../03_resultado_operacional_financeiro/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>FALCONI Python - Kovr Seguradora</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/brand.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <link rel="icon" type="image/svg+xml" href="https://www.kovr.com.br/assets/icons/logo-mini.svg">
+  <meta name="application-name" content="Kovr Seguradora">
+  <meta property="og:site_name" content="Kovr Seguradora">
+  <meta property="og:title" content="Kovr Seguradora">
+  <meta property="og:image" content="https://kovr.com.br/wp-content/uploads/2022/06/Banner-Novo-Home-Kovr.png">
+  <meta property="og:image:alt" content="Kovr Seguradora">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kovr Seguradora">
+  <meta name="twitter:image" content="https://kovr.com.br/wp-content/uploads/2022/06/Banner-Novo-Home-Kovr.png">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#falconi_python" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Kovr Seguradora" class="md-header__button md-logo" aria-label="Kovr Seguradora" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kovr Seguradora
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FALCONI Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../apache_hop_00_variaveis/" class="md-tabs__link">
+          
+  
+  
+  Apache Hop
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../alocacao_affinity/" class="md-tabs__link">
+          
+  
+  
+  Alocações
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../assistencia_mawdy/" class="md-tabs__link">
+          
+  
+  
+  Assistências
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../rd_diarios/" class="md-tabs__link">
+          
+  
+  
+  Automações & Relatórios
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../03_resultado_operacional_financeiro/" class="md-tabs__link">
+          
+  
+  
+  Financeiro
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../analise_parcelas_conciliacao_picpay/" class="md-tabs__link">
+          
+  
+  
+  Dados & Modelagem
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../oficio_susep/" class="md-tabs__link">
+          
+  
+  
+  Regulatório
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Kovr Seguradora" class="md-nav__button md-logo" aria-label="Kovr Seguradora" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kovr Seguradora
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apache Hop
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apache Hop
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apache_hop_00_variaveis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variáveis de Ambiente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apache_hop_01_producao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produção
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apache_hop_02_sinistros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sinistros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apache_hop_04_parcelas_emissoes_innoveo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parcelas e Emissões Innoveo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apache_hop_99_relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alocações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Alocações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alocacao_affinity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affinity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alocacao_demais_ramos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demais Ramos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alocacao_rco/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RCO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rebalanceamento_analistas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rebalanceamento de Analistas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assistências
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Assistências
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assistencia_mawdy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mawdy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assistencia_maxpar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maxpar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../helppi_natura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helppi Natura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assistencia_facil_picpay_residencial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assistência Facil PicPay Residencial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automações & Relatórios
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Automações & Relatórios
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rd_diarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RD Diários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ferramenta_relatorios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ferramenta de Relatórios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorio_area_dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consultas SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FALCONI Python
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FALCONI Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-automatizado-de-geracao-de-indicadores-e-kpis-para-analise-de-seguros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema Automatizado de Geração de Indicadores e KPIs para Análise de Seguros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📑 Sumário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral-e-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Visão Geral e Arquitetura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Visão Geral e Arquitetura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo do Projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicadores-gerados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indicadores Gerados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#padrao-de-arquitetura-heranca-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Padrão de Arquitetura: Herança Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Estrutura do Projeto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📁 Estrutura do Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arvore-de-diretorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Árvore de Diretórios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descricao-dos-arquivos-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descrição dos Arquivos Principais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diretorio-de-saidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diretório de Saídas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-e-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Configuração e Autenticação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Configuração e Autenticação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variaveis-de-ambiente-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variáveis de Ambiente (.env)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexao-sql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexão SQL Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-de-autenticacaopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrutura de autenticacao.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indicadores-detalhados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Indicadores Detalhados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Indicadores Detalhados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id11-cross-sell-bancassurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID11 - Cross Sell Bancassurance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id131-indice-de-renovacao-rco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID131 - Índice de Renovação RCO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id16-indice-de-frequencia-de-sinistros-danos-materiais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID16 - Índice de Frequência de Sinistros (Danos Materiais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id17-recuperacao-de-sinistros-acumulado-por-data-de-ocorrencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID17 - Recuperação de Sinistros (Acumulado por Data de Ocorrência)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id17m-recuperacao-de-sinistros-mensal-por-data-de-movimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID17m - Recuperação de Sinistros (Mensal por Data de Movimento)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id26-prazo-medio-de-liquidacao-de-sinistros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID26 - Prazo Médio de Liquidação de Sinistros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id39-custo-medio-de-sinistros-rco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID39 - Custo Médio de Sinistros (RCO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-executar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Como Executar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Como Executar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pré-requisitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execucao-de-todos-os-indicadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execução de TODOS os Indicadores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execucao-de-um-indicador-isoladamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execução de UM Indicador Isoladamente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customizar-periodo-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizar Período de Execução
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencias-e-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Dependências e Requisitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Dependências e Requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bibliotecas-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliotecas Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-de-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela de Dependências
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-server-driver-odbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL Server &amp; Driver ODBC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variaveis-de-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variáveis de Ambiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-de-desenvolvimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Guia de Desenvolvimento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Guia de Desenvolvimento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-criar-um-novo-indicador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como Criar um Novo Indicador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como Criar um Novo Indicador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-definir-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Definir Requisitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-criar-classe-query-se-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Criar Classe Query (se necessário)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-criar-arquivo-do-indicador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Criar Arquivo do Indicador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-adicionar-indicador-ao-orquestrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Adicionar Indicador ao Orquestrador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-testar-localmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5️⃣ Testar Localmente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-documentar-no-readme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6️⃣ Documentar no README
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checklist-de-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Checklist de Implementação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxogramas-dos-principais-processos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 Fluxogramas dos Principais Processos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Fluxogramas dos Principais Processos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-arquitetura-geral-classes-e-hierarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Arquitetura Geral (Classes e Hierarquia)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-orquestracao-principal-gerar_todos_indicadorespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Orquestração Principal (gerar_todos_indicadores.py)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pipeline-generico-de-indicador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Pipeline Genérico de Indicador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-padrao-de-desenvolvimento-adicionar-novo-indicador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Padrão de Desenvolvimento - Adicionar Novo Indicador
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆘 Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🆘 Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erro-falha-na-conexao-sql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erro: "Falha na conexão SQL Server"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erro-permissao-negada-ao-salvar-arquivo-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erro: "Permissão negada ao salvar arquivo Excel"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erro-coluna-nao-encontrada-em-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erro: "Coluna não encontrada em SELECT"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erro-loop-nunca-termina-execucao-muito-lenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erro: "Loop nunca termina / execução muito lenta"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-e-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Referências e Recursos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Referências e Recursos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#localizacao-de-arquivos-de-suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Localização de Arquivos de Suporte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquivos-de-suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquivos de Suporte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquivos de Suporte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivos_apoio_projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 ARQUIVOS_APOIO_PROJETO/
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ric_falconi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 RIC_Falconi/
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queries-sql-principais-raiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Queries SQL Principais Raiz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📞 Contato
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financeiro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Financeiro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_resultado_operacional_financeiro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultado Operacional Financeiro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pagamento_comissao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pagamento de Comissões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notificacao_carteira/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notificação de Carteira
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contabil_tributos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contabil & Tributos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dados & Modelagem
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dados & Modelagem
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analise_parcelas_conciliacao_picpay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Parcelas - Conciliação PicPay Cyber
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipelines_mongodb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipelines MongoDB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dbt_kovr_innoveo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DBT KOVR / Innoveo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regulatório
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Regulatório
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oficio_susep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ofício SUSEP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-automatizado-de-geracao-de-indicadores-e-kpis-para-analise-de-seguros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema Automatizado de Geração de Indicadores e KPIs para Análise de Seguros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📑 Sumário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-geral-e-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Visão Geral e Arquitetura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Visão Geral e Arquitetura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo do Projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicadores-gerados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indicadores Gerados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#padrao-de-arquitetura-heranca-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Padrão de Arquitetura: Herança Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Estrutura do Projeto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📁 Estrutura do Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arvore-de-diretorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Árvore de Diretórios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descricao-dos-arquivos-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descrição dos Arquivos Principais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diretorio-de-saidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diretório de Saídas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-e-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Configuração e Autenticação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Configuração e Autenticação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variaveis-de-ambiente-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variáveis de Ambiente (.env)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexao-sql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexão SQL Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-de-autenticacaopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrutura de autenticacao.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indicadores-detalhados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Indicadores Detalhados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Indicadores Detalhados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id11-cross-sell-bancassurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID11 - Cross Sell Bancassurance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id131-indice-de-renovacao-rco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID131 - Índice de Renovação RCO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id16-indice-de-frequencia-de-sinistros-danos-materiais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID16 - Índice de Frequência de Sinistros (Danos Materiais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id17-recuperacao-de-sinistros-acumulado-por-data-de-ocorrencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID17 - Recuperação de Sinistros (Acumulado por Data de Ocorrência)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id17m-recuperacao-de-sinistros-mensal-por-data-de-movimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID17m - Recuperação de Sinistros (Mensal por Data de Movimento)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id26-prazo-medio-de-liquidacao-de-sinistros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID26 - Prazo Médio de Liquidação de Sinistros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id39-custo-medio-de-sinistros-rco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID39 - Custo Médio de Sinistros (RCO)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-executar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Como Executar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Como Executar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pré-requisitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execucao-de-todos-os-indicadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execução de TODOS os Indicadores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execucao-de-um-indicador-isoladamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execução de UM Indicador Isoladamente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customizar-periodo-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizar Período de Execução
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencias-e-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Dependências e Requisitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Dependências e Requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bibliotecas-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliotecas Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-de-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela de Dependências
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-server-driver-odbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL Server &amp; Driver ODBC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variaveis-de-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variáveis de Ambiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-de-desenvolvimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Guia de Desenvolvimento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Guia de Desenvolvimento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-criar-um-novo-indicador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como Criar um Novo Indicador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como Criar um Novo Indicador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-definir-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Definir Requisitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-criar-classe-query-se-necessario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Criar Classe Query (se necessário)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-criar-arquivo-do-indicador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Criar Arquivo do Indicador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-adicionar-indicador-ao-orquestrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Adicionar Indicador ao Orquestrador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-testar-localmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5️⃣ Testar Localmente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-documentar-no-readme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6️⃣ Documentar no README
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checklist-de-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Checklist de Implementação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxogramas-dos-principais-processos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 Fluxogramas dos Principais Processos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Fluxogramas dos Principais Processos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-arquitetura-geral-classes-e-hierarquia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Arquitetura Geral (Classes e Hierarquia)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-orquestracao-principal-gerar_todos_indicadorespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Orquestração Principal (gerar_todos_indicadores.py)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pipeline-generico-de-indicador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Pipeline Genérico de Indicador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-padrao-de-desenvolvimento-adicionar-novo-indicador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Padrão de Desenvolvimento - Adicionar Novo Indicador
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆘 Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🆘 Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erro-falha-na-conexao-sql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erro: "Falha na conexão SQL Server"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erro-permissao-negada-ao-salvar-arquivo-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erro: "Permissão negada ao salvar arquivo Excel"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erro-coluna-nao-encontrada-em-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erro: "Coluna não encontrada em SELECT"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erro-loop-nunca-termina-execucao-muito-lenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erro: "Loop nunca termina / execução muito lenta"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-e-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Referências e Recursos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Referências e Recursos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#localizacao-de-arquivos-de-suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Localização de Arquivos de Suporte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquivos-de-suporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquivos de Suporte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquivos de Suporte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivos_apoio_projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 ARQUIVOS_APOIO_PROJETO/
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ric_falconi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 RIC_Falconi/
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queries-sql-principais-raiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Queries SQL Principais Raiz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📞 Contato
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="falconi_python">📊 FALCONI_PYTHON<a class="headerlink" href="#falconi_python" title="Permanent link">&para;</a></h1>
+<p><a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" /></a>
+<a href="https://www.microsoft.com/sql-server"><img alt="SQL Server" src="https://img.shields.io/badge/SQL%20Server-2016+-CC2927?style=for-the-badge&amp;logo=microsoftsqlserver&amp;logoColor=white" /></a>
+<a href="https://pandas.pydata.org/"><img alt="pandas" src="https://img.shields.io/badge/pandas-1.0+-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white" /></a>
+<a href="https://github.com/mkleehammer/pyodbc"><img alt="pyodbc" src="https://img.shields.io/badge/pyodbc-4.0+-blue?style=for-the-badge&amp;logo=python&amp;logoColor=white" /></a></p>
+<!-- [![Excel](https://img.shields.io/badge/Excel-Output-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)](https://www.microsoft.com/excel)
+[![Status](https://img.shields.io/badge/Status-Production-brightgreen?style=for-the-badge)](#) -->
+
+<h2 id="sistema-automatizado-de-geracao-de-indicadores-e-kpis-para-analise-de-seguros">Sistema Automatizado de Geração de Indicadores e KPIs para Análise de Seguros<a class="headerlink" href="#sistema-automatizado-de-geracao-de-indicadores-e-kpis-para-analise-de-seguros" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Projeto de Business Intelligence (BI)</strong> que automatiza a geração de 7 indicadores/KPIs críticos de seguros através de pipelines Python orquestrados, com integração a SQL Server e persistência em arquivos Excel.</p>
+</blockquote>
+<hr />
+<h2 id="sumario">📑 Sumário<a class="headerlink" href="#sumario" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#-visão-geral-e-arquitetura">🎯 Visão Geral e Arquitetura</a></li>
+<li><a href="#-estrutura-do-projeto">📁 Estrutura do Projeto</a></li>
+<li><a href="#-configuração-e-autenticação">🔧 Configuração e Autenticação</a></li>
+<li><a href="#-indicadores-detalhados">📊 Indicadores Detalhados</a></li>
+<li><a href="#-como-executar">🚀 Como Executar</a></li>
+<li><a href="#-dependências-e-requisitos">📦 Dependências e Requisitos</a></li>
+<li><a href="#-guia-de-desenvolvimento">🛠️ Guia de Desenvolvimento</a></li>
+<li><a href="#-fluxogramas-dos-principais-processos">📈 Fluxogramas dos Principais Processos</a></li>
+<li><a href="#-troubleshooting">🆘 Troubleshooting</a></li>
+<li><a href="#-referências-e-recursos">📚 Referências e Recursos</a></li>
+</ul>
+<hr />
+<h2 id="visao-geral-e-arquitetura">🎯 Visão Geral e Arquitetura<a class="headerlink" href="#visao-geral-e-arquitetura" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo-do-projeto">Objetivo do Projeto<a class="headerlink" href="#objetivo-do-projeto" title="Permanent link">&para;</a></h3>
+<p>O FALCONI_PYTHON é um sistema de Business Intelligence que <strong>automatiza a geração de indicadores e KPIs críticos</strong> para a análise de performance em seguros. O projeto:</p>
+<ul>
+<li>✅ <strong>Orquestra a execução</strong> de múltiplos indicadores em lote ou individualmente</li>
+<li>✅ <strong>Integra-se a SQL Server</strong> para extração de dados de seguros</li>
+<li>✅ <strong>Aplica fórmulas de cálculo</strong> específicas para cada indicador (frequência, custo médio, recuperação, etc)</li>
+<li>✅ <strong>Persiste resultados</strong> em arquivos Excel estruturados com timestamps</li>
+<li>✅ <strong>Segue padrão de herança</strong> para garantir consistência e reutilização de código</li>
+</ul>
+<h3 id="indicadores-gerados">Indicadores Gerados<a class="headerlink" href="#indicadores-gerados" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome</th>
+<th>Objetivo</th>
+<th>Fórmula Principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>11</strong></td>
+<td>Cross Sell Bancassurance</td>
+<td>Medir adoção de cross-sell de produtos de vida</td>
+<td>COUNT(clientes com 2+ produtos) / COUNT(total clientes) × 100</td>
+</tr>
+<tr>
+<td><strong>131</strong></td>
+<td>Índice de Renovação RCO</td>
+<td>Identificar renovações de apólices RCO</td>
+<td>IF(qde_novas_apolices &gt; 0, 'SIM', 'NÃO')</td>
+</tr>
+<tr>
+<td><strong>16</strong></td>
+<td>Frequência de Sinistros DM</td>
+<td>Taxa de sinistralidade em Danos Materiais</td>
+<td>(QDE_SINISTROS / QDE_APOLICES) × 100</td>
+</tr>
+<tr>
+<td><strong>17</strong></td>
+<td>Recuperação Sinistros DM</td>
+<td>Taxa de ressarcimento por data de ocorrência</td>
+<td>(VENDA_SALVADOS + RECEB_RESSARCIMENTO) / PAGAMENTO_TOTAL</td>
+</tr>
+<tr>
+<td><strong>17m</strong></td>
+<td>Recuperação Sinistros DM (Mensal)</td>
+<td>Taxa de ressarcimento por data de movimento</td>
+<td>(VENDA_SALVADOS + RECEB_RESSARCIMENTO) / PAGAMENTO_TOTAL</td>
+</tr>
+<tr>
+<td><strong>26</strong></td>
+<td>Prazo Médio Liquidação</td>
+<td>Dias médios até primeiro pagamento</td>
+<td>AVG(AGING_PAGAMENTO) [dias entre ocorrência e 1º pagamento]</td>
+</tr>
+<tr>
+<td><strong>39</strong></td>
+<td>Custo Médio de Sinistros RCO</td>
+<td>Valor médio por sinistro indenizado</td>
+<td>SUM(VL_OPERACAO) / COUNT(pagamentos)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="padrao-de-arquitetura-heranca-query">Padrão de Arquitetura: Herança Query<a class="headerlink" href="#padrao-de-arquitetura-heranca-query" title="Permanent link">&para;</a></h3>
+<p>O projeto segue um <strong>padrão de design baseado em herança</strong> para máxima reutilização e consistência:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Classe Abstrata (ABC)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">Query</span> <span class="p">(</span><span class="n">classe</span> <span class="n">base</span> <span class="n">abstrata</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="err">├──</span> <span class="nd">@abstractmethod</span> <span class="n">query</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="err">├──</span> <span class="n">abrir_conexao</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  <span class="err">├──</span> <span class="n">executar_query</span><span class="p">()</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="err">└──</span> <span class="n">imprimir_status</span><span class="p">()</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Queries Concretas (implementam a ABC)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="err">├──</span> <span class="n">QdeApolicesAtivas</span><span class="p">(</span><span class="n">Query</span><span class="p">)</span>          <span class="c1"># Conta apólices ativas por filtro</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="err">├──</span> <span class="n">DimProdutoRamo</span><span class="p">(</span><span class="n">Query</span><span class="p">)</span>             <span class="c1"># Dimensão de produtos conforme ramo</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="err">├──</span> <span class="n">MovimentacaoSinistros</span><span class="p">(</span><span class="n">Query</span><span class="p">)</span>      <span class="c1"># Extrai movimentos de sinistros</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="err">└──</span> <span class="p">[</span><span class="n">outras</span> <span class="n">queries</span> <span class="n">específicas</span><span class="p">]</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># Geradores de Indicador (usam as queries acima)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="err">├──</span> <span class="n">GerarID11</span><span class="p">(</span><span class="n">ambiente</span><span class="p">,</span> <span class="n">data_execucao</span><span class="p">)</span>       <span class="err">→</span> <span class="n">ID11_Cross_Sell_Bancassurance</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="err">├──</span> <span class="n">GerarID131</span><span class="p">(</span><span class="n">ambiente</span><span class="p">,</span> <span class="n">data_execucao</span><span class="p">)</span>      <span class="err">→</span> <span class="n">ID131_Indice_de_Renovacao_RCO</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="err">├──</span> <span class="n">GerarID16</span><span class="p">(</span><span class="n">ambiente</span><span class="p">,</span> <span class="n">data_execucao</span><span class="p">)</span>       <span class="err">→</span> <span class="n">ID16_Indice_de_Frequencia_Sinistros</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="err">├──</span> <span class="n">GerarID17</span><span class="p">(</span><span class="n">ambiente</span><span class="p">,</span> <span class="n">data_execucao</span><span class="p">)</span>       <span class="err">→</span> <span class="n">ID17_Recuperacao_Sinistros</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="err">├──</span> <span class="n">GerarID17m</span><span class="p">(</span><span class="n">ambiente</span><span class="p">,</span> <span class="n">data_execucao</span><span class="p">)</span>      <span class="err">→</span> <span class="n">ID17m_Recuperacao_Sinistros_MENSAL</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="err">├──</span> <span class="n">GerarID26</span><span class="p">(</span><span class="n">ambiente</span><span class="p">,</span> <span class="n">data_execucao</span><span class="p">)</span>       <span class="err">→</span> <span class="n">ID26_Prazo_Medio_Liquidacao</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="err">└──</span> <span class="n">GerarID39</span><span class="p">(</span><span class="n">ambiente</span><span class="p">,</span> <span class="n">data_execucao</span><span class="p">)</span>       <span class="err">→</span> <span class="n">ID39_Custo_Medio_Sinistros_RCO</span>
+</code></pre></div>
+<hr />
+<h2 id="estrutura-do-projeto">📁 Estrutura do Projeto<a class="headerlink" href="#estrutura-do-projeto" title="Permanent link">&para;</a></h2>
+<h3 id="arvore-de-diretorios">Árvore de Diretórios<a class="headerlink" href="#arvore-de-diretorios" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>01_FALCONI_PYTHON/
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>│
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── 📄 README.md                                                     (Este arquivo)
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├── 📄 APOIO.py                                                      (Funções utilitárias: datas, pastas, fórmulas)
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>├── 📄 autenticacao.py                                               (Dicionário de credenciais - carrega .env)
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── 📄 conexao_banco.py                                              (Classe Conexoes para gerenciar SQL Server)
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│                       
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>├── 📄 gerar_todos_indicadores.py                                    (Orquestrador principal - executa 7 IDs em lote)
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>├── 📄 gerar_indicador_individualmente.py                            (Runner para execução isolada de 1 indicador)
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│                       
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>├── 📄 ID11_Cross_Sell_Bancassurance.py                              (Gerador do indicador ID11)
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>├── 📄 ID131_Indice_de_Renovacao_RCO.py                              (Gerador do indicador ID131)
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>├── 📄 ID16_Indice_de_Frequencia_de_Sinistros_Danos_Materiais.py     (ID16)
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>├── 📄 ID17_Recuperacao_Sinistros_Danos_Materiais.py                 (ID17 - Acumulado)
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>├── 📄 ID17_Recuperacao_Sinistros_Danos_Materiais_MENSAL.py          (ID17m - Mensal)
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>├── 📄 ID26_Prazo_Medio_Liquidacao_Sinistros.py                      (ID26)
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>├── 📄 ID39_Custo_Medio_de_Sinistros_de_RCO.py                       (ID39)
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>│
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>├── 📊 QUERY_CROSS-SELL.sql                                          (Query base para ID11)
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>├── 📊 QUERY_CROSS-SELL_APOLICES.sql                                 (Query variação para ID11)
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>├── 📊 QUERY_CROSS-SELL_APOLICES_ITENS_VIDA.sql                      (Query suporte)
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>├── 📊 QUERY_CROSS-SELL_ITENS_VIDA.sql                               (Query suporte)
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>├── 📊 QUERY_RENOVACAO_RCO.sql                                       (Query base para ID131)
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>├── 📊 QUERY_RENOVACAO_RCO_APOL.sql                                  (Query variação - apólices)
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>├── 📊 QUERY_RENOVACAO_RCO_CHASSI.sql                                (Query variação - chassis)
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>│
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>├── 📓 teste.ipynb                                                   (Notebook experimental para testes)
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>│                       
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>├── 📁 ARQUIVOS_APOIO_PROJETO/                                       (DIRETÓRIO DE SUPORTE)
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>│   ├── ID_INDICADOR.xlsx                                            (Mapeamento de IDs de indicadores)
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>│   ├── LAYOUT_IMPORTACAO.xlsx                                       (Layout esperado dos dados)
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>│   └── Pendências Dados Tecnologia.xlsx                             (Rastreamento de issues)
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>│                       
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>└── 📁 RIC_Falconi/                                                  (DIRETÓRIO DE QUERIES COMPLEMENTARES)
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>    ├── Clientes Ativos.sql                                          (Query de clientes ativos)
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>    ├── EMISSAO_BANCA.sql                                            (Query de emissões bancárias)
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>    ├── Ticket Médio.sql                                             (Query de ticket médio)
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>    └── teste1.sql                                                   (Query experimental)
+</code></pre></div>
+<h3 id="descricao-dos-arquivos-principais">Descrição dos Arquivos Principais<a class="headerlink" href="#descricao-dos-arquivos-principais" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>Tipo</th>
+<th>Responsabilidade</th>
+<th>Padrão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>APOIO.py</code></td>
+<td>Módulo</td>
+<td>Funções utilitárias (datas, pastas, fórmulas de cálculo)</td>
+<td>Importado por todos os geradores</td>
+</tr>
+<tr>
+<td><code>autenticacao.py</code></td>
+<td>Config</td>
+<td>Dicionário de credenciais carregadas de <code>.env</code></td>
+<td>Segurança: credenciais não versionadas</td>
+</tr>
+<tr>
+<td><code>conexao_banco.py</code></td>
+<td>Classe</td>
+<td><code>Conexoes</code> - gerencia pyodbc com SQL Server</td>
+<td>Factory pattern: <code>Conexoes.conexao_producao_i4()</code></td>
+</tr>
+<tr>
+<td><code>gerar_todos_indicadores.py</code></td>
+<td>Orquestrador</td>
+<td>Loop mensal (2025-04-01 até 04-30) → executa 7 IDs</td>
+<td>Captura sucessos/erros, imprime relatório</td>
+</tr>
+<tr>
+<td><code>gerar_indicador_individualmente.py</code></td>
+<td>Runner</td>
+<td>Executa UM indicador isoladamente (teste/reprocessamento)</td>
+<td>Útil para debug</td>
+</tr>
+<tr>
+<td><code>ID[X]_*.py</code></td>
+<td>Indicador</td>
+<td><code>GerarID[X]</code> - implementa pipeline de 1 indicador</td>
+<td>Herança de <code>Query</code>, método obrigatório: <code>gerar_indicador_[X]()</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="diretorio-de-saidas">Diretório de Saídas<a class="headerlink" href="#diretorio-de-saidas" title="Permanent link">&para;</a></h3>
+<p>Todos os arquivos Excel gerados são persistidos em:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>\\awsseg130006\ACTIO\
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── ID - 11\                    (Cross Sell Bancassurance)
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├── ID - 131\                   (Índice de Renovação RCO)
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>├── ID - 16\                    (Frequência de Sinistros)
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>├── ID - 17\                    (Recuperação Sinistros Acumulado)
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>├── ID - 17m\                   (Recuperação Sinistros Mensal)
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>├── ID - 26\                    (Prazo Médio Liquidação)
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>└── ID - 39\                    (Custo Médio Sinistros RCO)
+</code></pre></div>
+<p><strong>Padrão de Nomenclatura dos Arquivos:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ID {ID} - {NOME_INDICADOR} - COMPETENCIA {YYYYMM} - gerado em {DD-MM-YYYY hHH mMM sSS}.xlsx
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Exemplo:
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>ID 11 - Cross Sell Bancassurance - COMPETENCIA 202504 - gerado em 15-11-2024 h13 m41 s54.xlsx
+</code></pre></div>
+<hr />
+<h2 id="configuracao-e-autenticacao">🔧 Configuração e Autenticação<a class="headerlink" href="#configuracao-e-autenticacao" title="Permanent link">&para;</a></h2>
+<h3 id="variaveis-de-ambiente-env">Variáveis de Ambiente (.env)<a class="headerlink" href="#variaveis-de-ambiente-env" title="Permanent link">&para;</a></h3>
+<p>O projeto utiliza <strong>dotenv</strong> para armazenar credenciais de forma segura. Crie um arquivo <code>.env</code> na <strong>raiz do projeto</strong> com as seguintes variáveis:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># .env (NÃO versionado - adicione à .gitignore)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nv">USER_PROD</span><span class="o">=</span>seu_usuario_sql_server
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nv">PASSWORD_PROD</span><span class="o">=</span>sua_senha_sql_server
+</code></pre></div>
+<p><strong>⚠️ IMPORTANTE:</strong> 
+- O arquivo <code>.env</code> <strong>não deve ser versionado</strong> (já está em <code>.gitignore</code>)
+- As credenciais carregadas via <code>dotenv</code> são injetadas em <code>autenticacao.py</code></p>
+<h3 id="conexao-sql-server">Conexão SQL Server<a class="headerlink" href="#conexao-sql-server" title="Permanent link">&para;</a></h3>
+<p><strong>Classe Principal:</strong> <code>Conexoes</code> (em <a href="conexao_banco.py">conexao_banco.py</a>)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">conexao_banco</span><span class="w"> </span><span class="kn">import</span> <span class="n">Conexoes</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># Método 1: Criar conexão com nome específico</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">conexao</span> <span class="o">=</span> <span class="n">Conexoes</span><span class="p">(</span><span class="n">conexao</span><span class="o">=</span><span class="s1">&#39;producao_i4&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">conexao</span><span class="o">.</span><span class="n">abrir_conexao</span><span class="p">()</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># Método 2: Factory method (recomendado)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">conexao</span> <span class="o">=</span> <span class="n">Conexoes</span><span class="o">.</span><span class="n">conexao_producao_i4</span><span class="p">()</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">conexao</span><span class="o">.</span><span class="n">abrir_conexao</span><span class="p">()</span>
+</code></pre></div>
+<!-- **Detalhes da Conexão SQL Server:**
+
+| Parâmetro | Valor |
+|-----------|-------|
+| **Servidor** | 10.101.2.74 |
+| **Database** | re_i4pro |
+| **Driver ODBC** | ODBC Driver 18 for SQL Server |
+| **Porta** | 1433 (padrão SQL Server) |
+| **Encrypt** | no |
+| **Credenciais** | Carregadas de `.env` (USER_PROD, PASSWORD_PROD) |
+| **Ambiente** | producao_i4 | -->
+
+<h3 id="estrutura-de-autenticacaopy">Estrutura de <code>autenticacao.py</code><a class="headerlink" href="#estrutura-de-autenticacaopy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">load_dotenv</span><span class="p">()</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">autenticacao</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="s2">&quot;producao_i4&quot;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="s2">&quot;server&quot;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;USER_PROD&#39;</span><span class="p">),</span>      <span class="c1"># Usuário SQL Server</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;PASSWORD_PROD&#39;</span><span class="p">)</span> <span class="c1"># Senha SQL Server</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="p">}</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="indicadores-detalhados">📊 Indicadores Detalhados<a class="headerlink" href="#indicadores-detalhados" title="Permanent link">&para;</a></h2>
+<details>
+<summary>📊 Expandir Lista Completa de 7 Indicadores</summary>
+<h3 id="id11-cross-sell-bancassurance">ID11 - Cross Sell Bancassurance<a class="headerlink" href="#id11-cross-sell-bancassurance" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Medir a penetração de produtos de vida em seguros (cross-sell em ramos 23 e 28).</p>
+<p><strong>Fórmula:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Percentual de Clientes com Cross-Sell = (Clientes com 2+ produtos / Total de Clientes) × 100
+</code></pre></div></p>
+<p><strong>Variáveis de Entrada (SQL):</strong>
+- <code>DOCUMENTO_TOMADOR</code> - CPF/CNPJ do cliente
+- <code>CD_RAMO</code> - Código do ramo de seguro (filtro: 23, 28)
+- <code>ID_APOLICE</code> - Identificador único da apólice
+- <code>DH_EMISSAO</code> - Data e hora de emissão</p>
+<p><strong>Estrutura de Saída (Excel):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DT_CORTE</td>
+<td>string</td>
+<td>Data de corte (formato: YYYYMMDD)</td>
+</tr>
+<tr>
+<td>CROSS_SELL</td>
+<td>string</td>
+<td>'SIM' = cliente tem 2+ produtos, 'NÃO' = apenas 1 produto</td>
+</tr>
+<tr>
+<td>QDE_CLIENTES</td>
+<td>int</td>
+<td>Quantidade de clientes nesta categoria</td>
+</tr>
+<tr>
+<td>PER_CROSS</td>
+<td>float</td>
+<td>Percentual de clientes com cross-sell</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>string</td>
+<td>'11' (ID do indicador)</td>
+</tr>
+<tr>
+<td>NM_INDICADOR</td>
+<td>string</td>
+<td>'Cross Sell Bancassurance'</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplo de Linha:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>DT_CORTE: 202504, CROSS_SELL: SIM, QDE_CLIENTES: 1250, PER_CROSS: 0.3500, ID: 11, NM_INDICADOR: Cross Sell Bancassurance
+</code></pre></div>
+<p><strong>Arquivo Gerado:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>\\awsseg130006\ACTIO\ID - 11\ID 11 - Cross Sell Bancassurance - COMPETENCIA 202504 - gerado em 15-11-2024 h13 m41 s54.xlsx
+</code></pre></div></p>
+<hr />
+<h3 id="id131-indice-de-renovacao-rco">ID131 - Índice de Renovação RCO<a class="headerlink" href="#id131-indice-de-renovacao-rco" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Medir a taxa de renovação de apólices em Responsabilidade Civil Operacional (RCO).</p>
+<p><strong>Fórmula:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Índice de Renovação = (Apólices Renovadas / Apólices com Vigência Finalizada) × 100
+</code></pre></div></p>
+<p><strong>Variáveis de Entrada (SQL):</strong>
+- <code>NM_PESSOA_TOMADOR</code> - Nome do cliente tomador
+- <code>ID_PESSOA_TOMADOR</code> - ID único do cliente
+- <code>CD_RAMO</code> - Código do ramo (filtro: 23, 28)
+- <code>FL_DOCUMENTO_OFICIAL</code> - Flag de documento oficial (filtro: 1)
+- <code>DT_VIGENCIA_INI</code>, <code>DT_VIGENCIA_FIM</code> - Período de vigência
+- <code>VL_TARIFARIO</code> - Valor tarifário da apólice</p>
+<p><strong>Estrutura de Saída (Excel):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NM_PESSOA_TOMADOR</td>
+<td>string</td>
+<td>Nome do cliente</td>
+</tr>
+<tr>
+<td>ID_PESSOA_TOMADOR</td>
+<td>int</td>
+<td>ID único cliente</td>
+</tr>
+<tr>
+<td>QDE_APOLICE_FIM_VIG</td>
+<td>int</td>
+<td>Apólices que venceram no período</td>
+</tr>
+<tr>
+<td>VL_TARIFARIO</td>
+<td>float</td>
+<td>Valor total tarifário</td>
+</tr>
+<tr>
+<td>QDE_NOVAS_APOLICES</td>
+<td>int</td>
+<td>Renovações efetivadas</td>
+</tr>
+<tr>
+<td>RENOVACAO</td>
+<td>string</td>
+<td>'SIM' = renovado, 'NÃO' = não renovado</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>string</td>
+<td>'131'</td>
+</tr>
+<tr>
+<td>NM_INDICADOR</td>
+<td>string</td>
+<td>'Índice de Renovação RCO'</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Arquivo Gerado:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>\\awsseg130006\ACTIO\ID - 131\ID 131 - Indice de Renovacao RCO - COMPETENCIA 202504 - gerado em 15-11-2024 h13 m42 s10.xlsx
+</code></pre></div></p>
+<hr />
+<h3 id="id16-indice-de-frequencia-de-sinistros-danos-materiais">ID16 - Índice de Frequência de Sinistros (Danos Materiais)<a class="headerlink" href="#id16-indice-de-frequencia-de-sinistros-danos-materiais" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Medir a taxa de sinistralidade em Danos Materiais, indicando frequência de ocorrências.</p>
+<p><strong>Fórmula:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Frequência de Sinistros DM = (Quantidade de Sinistros / Quantidade de Apólices) × 100
+</code></pre></div></p>
+<p><strong>Variáveis de Entrada (SQL):</strong>
+- <code>QDE_APOLICES</code> - Total de apólices ativas
+- <code>QDE_SINISTROS</code> - Total de sinistros ocorridos
+- <code>CD_PRODUTO</code> - Código do produto (produtos selecionados: 133, 124, 134, 163, 157, 169, 171, 184, 187)
+- <code>DT_OCORRENCIA_SINISTRO</code> - Data de ocorrência do sinistro</p>
+<p><strong>Estrutura de Saída (Excel):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CD_PRODUTO</td>
+<td>int</td>
+<td>Código do produto</td>
+</tr>
+<tr>
+<td>NM_PRODUTO</td>
+<td>string</td>
+<td>Nome do produto</td>
+</tr>
+<tr>
+<td>QDE_APOLICES</td>
+<td>int</td>
+<td>Quantidade de apólices do produto</td>
+</tr>
+<tr>
+<td>QDE_SINISTROS</td>
+<td>int</td>
+<td>Quantidade de sinistros ocorridos</td>
+</tr>
+<tr>
+<td>FREQUENCIA_SINISTROS</td>
+<td>float</td>
+<td>Taxa de frequência (%)</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>string</td>
+<td>'16'</td>
+</tr>
+<tr>
+<td>NM_INDICADOR</td>
+<td>string</td>
+<td>'Índice de Frequência de Sinistros Danos Materiais'</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="id17-recuperacao-de-sinistros-acumulado-por-data-de-ocorrencia">ID17 - Recuperação de Sinistros (Acumulado por Data de Ocorrência)<a class="headerlink" href="#id17-recuperacao-de-sinistros-acumulado-por-data-de-ocorrencia" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Medir a taxa de recuperação/ressarcimento em Danos Materiais acumulando por <strong>data de ocorrência</strong> do sinistro.</p>
+<p><strong>Fórmula:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Recuperação = (Ressarcimento + Vendas Salvados) / Total de Sinistros Ocorridos
+</code></pre></div></p>
+<p><strong>Variáveis de Entrada (SQL):</strong>
+- <code>CD_PRODUTO</code> - Código do produto (filtro: 133, 124, 134, 163, 157, 169, 171, 184, 187)
+- <code>DT_OCORRENCIA</code> - Data de ocorrência do sinistro (eixo temporal)
+- <code>VL_SINISTRO_OCORRIDO</code> - Valor do sinistro
+- <code>VL_RESSARCIMENTO</code> - Valor ressarcido ao cliente
+- <code>VL_VENDA_SALVADOS</code> - Valor de venda de materiais salvados</p>
+<p><strong>Estrutura de Saída (Excel):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CD_PRODUTO</td>
+<td>int</td>
+<td>Código do produto</td>
+</tr>
+<tr>
+<td>DT_CORTE</td>
+<td>string</td>
+<td>Data de corte (YYYYMMDD)</td>
+</tr>
+<tr>
+<td>TOTAL_SINISTROS</td>
+<td>float</td>
+<td>Total de sinistros ocorridos</td>
+</tr>
+<tr>
+<td>TOTAL_RESSARCIDO</td>
+<td>float</td>
+<td>Total ressarcido + salvados</td>
+</tr>
+<tr>
+<td>TAXA_RECUPERACAO</td>
+<td>float</td>
+<td>Taxa em percentual (%)</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>string</td>
+<td>'17'</td>
+</tr>
+<tr>
+<td>NM_INDICADOR</td>
+<td>string</td>
+<td>'Recuperação Sinistros Danos Materiais'</td>
+</tr>
+</tbody>
+</table>
+<p><strong>⚠️ DIFERENÇA ID17 vs ID17m:</strong>
+- <strong>ID17</strong>: Agrupa por data de <strong>ocorrência</strong> do sinistro
+- <strong>ID17m</strong> (mensal): Agrupa por data de <strong>movimento</strong> (processamento)</p>
+<hr />
+<h3 id="id17m-recuperacao-de-sinistros-mensal-por-data-de-movimento">ID17m - Recuperação de Sinistros (Mensal por Data de Movimento)<a class="headerlink" href="#id17m-recuperacao-de-sinistros-mensal-por-data-de-movimento" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Medir a taxa de recuperação/ressarcimento em Danos Materiais agregando por <strong>data de movimento</strong> (processamento/processamento do sinistro).</p>
+<p><strong>Fórmula:</strong> Mesma de ID17
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Recuperação Mensal = (Ressarcimento + Vendas Salvados) / Total de Sinistros
+</code></pre></div></p>
+<p><strong>Diferença Principal com ID17:</strong>
+- Eixo temporal: <strong>Data de Movimento</strong> (em vez de Data de Ocorrência)
+- Permite análise de desempenho operacional (tempo de processamento)</p>
+<hr />
+<h3 id="id26-prazo-medio-de-liquidacao-de-sinistros">ID26 - Prazo Médio de Liquidação de Sinistros<a class="headerlink" href="#id26-prazo-medio-de-liquidacao-de-sinistros" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Medir o prazo médio (em dias) entre a ocorrência de um sinistro e sua liquidação final.</p>
+<p><strong>Fórmula:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Prazo Médio = AVG(Data de Liquidação - Data de Ocorrência)
+</code></pre></div></p>
+<p><strong>Variáveis de Entrada (SQL):</strong>
+- <code>DT_OCORRENCIA_SINISTRO</code> - Data de ocorrência
+- <code>DT_LIQUIDACAO</code> - Data de liquidação final
+- <code>CD_PRODUTO</code> - Código do produto
+- <code>VL_INDENIZACAO</code> - Valor total da indenização</p>
+<p><strong>Estrutura de Saída (Excel):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CD_PRODUTO</td>
+<td>int</td>
+<td>Código do produto</td>
+</tr>
+<tr>
+<td>QDE_SINISTROS_LIQUIDADOS</td>
+<td>int</td>
+<td>Total de sinistros liquidados</td>
+</tr>
+<tr>
+<td>PRAZO_MEDIO_DIAS</td>
+<td>float</td>
+<td>Prazo médio em dias</td>
+</tr>
+<tr>
+<td>PRAZO_MINIMO_DIAS</td>
+<td>int</td>
+<td>Prazo mínimo observado</td>
+</tr>
+<tr>
+<td>PRAZO_MAXIMO_DIAS</td>
+<td>int</td>
+<td>Prazo máximo observado</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>string</td>
+<td>'26'</td>
+</tr>
+<tr>
+<td>NM_INDICADOR</td>
+<td>string</td>
+<td>'Prazo Médio Liquidação Sinistros'</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="id39-custo-medio-de-sinistros-rco">ID39 - Custo Médio de Sinistros (RCO)<a class="headerlink" href="#id39-custo-medio-de-sinistros-rco" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo:</strong> Medir o valor médio de indenização por sinistro em Responsabilidade Civil Operacional.</p>
+<p><strong>Fórmula:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Custo Médio = Total de Custos Pagos / Quantidade de Sinistros
+</code></pre></div></p>
+<p><strong>Variáveis de Entrada (SQL):</strong>
+- <code>QDE_SINISTROS</code> - Quantidade de sinistros em RCO
+- <code>VL_TOTAL_PAGO</code> - Total pago (indenizações)
+- <code>CD_RAMO</code> - Código do ramo (filtro: RCO específico)
+- <code>DT_PAGAMENTO</code> - Data de pagamento</p>
+<p><strong>Estrutura de Saída (Excel):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Coluna</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CD_RAMO</td>
+<td>int</td>
+<td>Código do ramo</td>
+</tr>
+<tr>
+<td>NM_RAMO</td>
+<td>string</td>
+<td>Nome do ramo</td>
+</tr>
+<tr>
+<td>QDE_SINISTROS</td>
+<td>int</td>
+<td>Quantidade de sinistros</td>
+</tr>
+<tr>
+<td>VL_TOTAL_PAGO</td>
+<td>float</td>
+<td>Total pago em indenizações</td>
+</tr>
+<tr>
+<td>CUSTO_MEDIO_SINISTRO</td>
+<td>float</td>
+<td>Valor médio por sinistro</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>string</td>
+<td>'39'</td>
+</tr>
+<tr>
+<td>NM_INDICADOR</td>
+<td>string</td>
+<td>'Custo Médio de Sinistros de RCO'</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplo de Linha:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>CD_RAMO: 28, NM_RAMO: RCO, QDE_SINISTROS: 450, VL_TOTAL_PAGO: 1500000.00, CUSTO_MEDIO_SINISTRO: 3333.33, ID: 39, NM_INDICADOR: Custo Médio de Sinistros de RCO
+</code></pre></div>
+</details>
+<hr />
+<h2 id="como-executar">🚀 Como Executar<a class="headerlink" href="#como-executar" title="Permanent link">&para;</a></h2>
+<details>
+<summary>⚙️ Expandir Instruções de Execução</summary>
+<h3 id="pre-requisitos">Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Permanent link">&para;</a></h3>
+<ol>
+<li>✅ Python 3.8+</li>
+<li>✅ Biblioteca <code>pyodbc</code> instalada</li>
+<li>✅ SQL Server driver ODBC 18 instalado</li>
+<li>✅ Arquivo <code>.env</code> criado com credenciais</li>
+<li>✅ Permissão de escrita no diretório <code>\\awsseg130006\ACTIO\</code></li>
+</ol>
+<h3 id="execucao-de-todos-os-indicadores">Execução de TODOS os Indicadores<a class="headerlink" href="#execucao-de-todos-os-indicadores" title="Permanent link">&para;</a></h3>
+<p>Execute o <strong>orquestrador principal</strong> para gerar todos os 7 indicadores em lote (período: 2025-04-01 a 2025-04-30):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Terminal / PowerShell</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>python<span class="w"> </span>gerar_todos_indicadores.py
+</code></pre></div>
+<p><strong>O que acontece:</strong>
+1. Define ambiente = <code>producao_i4</code> e data = 2025-04-01 a 2025-04-30
+2. Loop mensal: para cada mês, executa os 7 indicadores na seguinte ordem:
+   - ID11 (Cross Sell Bancassurance)
+   - ID131 (Índice de Renovação RCO)
+   - ID17 (Recuperação Sinistros - Acumulado)
+   - ID17m (Recuperação Sinistros - Mensal)
+   - ID26 (Prazo Médio Liquidação)
+   - ID39 (Custo Médio Sinistros)
+   - ID16 (Frequência de Sinistros)
+3. Captura sucessos/erros em listas
+4. Imprime relatório final com:
+   - Duração total (segundos)
+   - Hora início e fim
+   - Resumo de sucessos vs erros</p>
+<hr />
+<h3 id="execucao-de-um-indicador-isoladamente">Execução de UM Indicador Isoladamente<a class="headerlink" href="#execucao-de-um-indicador-isoladamente" title="Permanent link">&para;</a></h3>
+<p>Use o <strong>runner individual</strong> para gerar apenas um indicador (útil para testes, debug ou reprocessamento):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>python<span class="w"> </span>gerar_indicador_individualmente.py
+</code></pre></div>
+<p><strong>Personalização: Modificar script para indicador desejado</strong></p>
+<p>Abra <a href="gerar_indicador_individualmente.py">gerar_indicador_individualmente.py</a> e descomente o indicador desejado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># Exemplo: executar apenas ID11 para teste</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ID11_Cross_Sell_Bancassurance</span><span class="w"> </span><span class="kn">import</span> <span class="n">GerarID11</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="n">indicador</span> <span class="o">=</span> <span class="n">GerarID11</span><span class="p">(</span><span class="n">ambiente</span><span class="o">=</span><span class="s1">&#39;producao_i4&#39;</span><span class="p">,</span> <span class="n">data_execucao</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2025</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">df_resultado</span> <span class="o">=</span> <span class="n">indicador</span><span class="o">.</span><span class="n">gerar_indicador_11</span><span class="p">()</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ID11 gerado com sucesso: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_resultado</span><span class="p">)</span><span class="si">}</span><span class="s2"> linhas&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h3 id="customizar-periodo-de-execucao">Customizar Período de Execução<a class="headerlink" href="#customizar-periodo-de-execucao" title="Permanent link">&para;</a></h3>
+<p><strong>Para alterar o período de análise</strong>, edite <a href="gerar_todos_indicadores.py">gerar_todos_indicadores.py</a>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Linhas ~20-25</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">START_DATE</span> <span class="o">=</span> <span class="s1">&#39;2025-04-01&#39;</span>  <span class="c1"># Alterar aqui</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="n">END_DATE</span> <span class="o">=</span> <span class="s1">&#39;2025-04-30&#39;</span>    <span class="c1"># Alterar aqui</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">ambiente</span> <span class="o">=</span> <span class="s1">&#39;producao_i4&#39;</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="c1"># Frequência: pode ser &#39;D&#39; (diário), &#39;W&#39; (semanal), &#39;M&#39; (mensal)</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="n">freq</span> <span class="o">=</span> <span class="s1">&#39;m&#39;</span>  <span class="c1"># mensal</span>
+</code></pre></div>
+</details>
+<hr />
+<h2 id="dependencias-e-requisitos">📦 Dependências e Requisitos<a class="headerlink" href="#dependencias-e-requisitos" title="Permanent link">&para;</a></h2>
+<h3 id="bibliotecas-python">Bibliotecas Python<a class="headerlink" href="#bibliotecas-python" title="Permanent link">&para;</a></h3>
+<p>Instale as dependências via pip:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+<p><strong>Ou manualmente:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pandas&gt;<span class="o">=</span><span class="m">1</span>.0.0
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>pip<span class="w"> </span>install<span class="w"> </span>numpy&gt;<span class="o">=</span><span class="m">1</span>.18.0
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>pip<span class="w"> </span>install<span class="w"> </span>pyodbc&gt;<span class="o">=</span><span class="m">4</span>.0.0
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>pip<span class="w"> </span>install<span class="w"> </span>tqdm&gt;<span class="o">=</span><span class="m">4</span>.40.0
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>pip<span class="w"> </span>install<span class="w"> </span>python-dateutil&gt;<span class="o">=</span><span class="m">2</span>.8.0
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>pip<span class="w"> </span>install<span class="w"> </span>python-dotenv&gt;<span class="o">=</span><span class="m">0</span>.12.0
+</code></pre></div>
+<h3 id="tabela-de-dependencias">Tabela de Dependências<a class="headerlink" href="#tabela-de-dependencias" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Versão Mín</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pandas</code></td>
+<td>1.0.0</td>
+<td>Manipulação e análise de dados (DataFrames)</td>
+</tr>
+<tr>
+<td><code>numpy</code></td>
+<td>1.18.0</td>
+<td>Operações numéricas e cálculos vetorizados</td>
+</tr>
+<tr>
+<td><code>pyodbc</code></td>
+<td>4.0.0</td>
+<td>Conexão e execução de queries em SQL Server</td>
+</tr>
+<tr>
+<td><code>tqdm</code></td>
+<td>4.40.0</td>
+<td>Barras de progresso em loops longos</td>
+</tr>
+<tr>
+<td><code>python-dateutil</code></td>
+<td>2.8.0</td>
+<td>Manipulação avançada de datas (relativedelta)</td>
+</tr>
+<tr>
+<td><code>python-dotenv</code></td>
+<td>0.12.0</td>
+<td>Carregamento de variáveis de ambiente (.env)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-server-driver-odbc">SQL Server &amp; Driver ODBC<a class="headerlink" href="#sql-server-driver-odbc" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Requisito</th>
+<th>Versão</th>
+<th>Detalhes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SQL Server</strong></td>
+<td>2016+</td>
+<td>Database engine para re_i4pro</td>
+</tr>
+<tr>
+<td><strong>ODBC Driver</strong></td>
+<td>18 (mín)</td>
+<td>"ODBC Driver 18 for SQL Server"</td>
+</tr>
+<tr>
+<td><strong>Porta</strong></td>
+<td>1433</td>
+<td>Padrão SQL Server</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verificar Driver ODBC instalado (Windows):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c"># PowerShell</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="nb">Get-OdbcDriver</span> <span class="p">|</span> <span class="nb">Select </span><span class="n">Name</span><span class="p">,</span> <span class="n">Version</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="c"># Resultado esperado:</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="c"># ODBC Driver 18 for SQL Server  18.x.x.x</span>
+</code></pre></div>
+<h3 id="variaveis-de-ambiente">Variáveis de Ambiente<a class="headerlink" href="#variaveis-de-ambiente" title="Permanent link">&para;</a></h3>
+<p>Crie arquivo <code>.env</code> na raiz com:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1"># .env</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="nv">USER_PROD</span><span class="o">=</span>seu_usuario_sql
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="nv">PASSWORD_PROD</span><span class="o">=</span>sua_senha_sql
+</code></pre></div>
+<hr />
+<h2 id="guia-de-desenvolvimento">🛠️ Guia de Desenvolvimento<a class="headerlink" href="#guia-de-desenvolvimento" title="Permanent link">&para;</a></h2>
+<details>
+<summary>📖 Expandir Guia Completo de Desenvolvimento</summary>
+<h3 id="como-criar-um-novo-indicador">Como Criar um Novo Indicador<a class="headerlink" href="#como-criar-um-novo-indicador" title="Permanent link">&para;</a></h3>
+<p>Se precisar adicionar um novo indicador (ex: ID99 - Novo Indicador), siga estes passos:</p>
+<h4 id="1-definir-requisitos">1️⃣ <strong>Definir Requisitos</strong><a class="headerlink" href="#1-definir-requisitos" title="Permanent link">&para;</a></h4>
+<p>Documente:
+- Objetivo do indicador
+- Fórmula de cálculo
+- Filtros SQL necessários
+- Variáveis de entrada e saída</p>
+<h4 id="2-criar-classe-query-se-necessario">2️⃣ <strong>Criar Classe Query (se necessário)</strong><a class="headerlink" href="#2-criar-classe-query-se-necessario" title="Permanent link">&para;</a></h4>
+<p>Se a query é específica, crie uma nova classe Query em um arquivo auxiliar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># auxiliar_querys.py (criar se não existir)</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">conexao_banco</span><span class="w"> </span><span class="kn">import</span> <span class="n">Conexoes</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">MinhaNovaQuery</span><span class="p">(</span><span class="n">Query</span><span class="p">):</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ambiente</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ambiente</span><span class="p">)</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Retorna (sql_string, connection_object)&quot;&quot;&quot;</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>        <span class="n">sql</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a><span class="s2">        SELECT </span>
+<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a><span class="s2">            COLUNA1, COLUNA2, COLUNA3</span>
+<a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a><span class="s2">        FROM </span>
+<a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a><span class="s2">            TABELA_ORIGEM</span>
+<a id="__codelineno-26-17" name="__codelineno-26-17" href="#__codelineno-26-17"></a><span class="s2">        WHERE </span>
+<a id="__codelineno-26-18" name="__codelineno-26-18" href="#__codelineno-26-18"></a><span class="s2">            DATA &gt;= &#39;</span><span class="se">{{</span><span class="s2">data_inicio</span><span class="se">}}</span><span class="s2">&#39;</span>
+<a id="__codelineno-26-19" name="__codelineno-26-19" href="#__codelineno-26-19"></a><span class="s2">            AND DATA &lt;= &#39;</span><span class="se">{{</span><span class="s2">data_fim</span><span class="se">}}</span><span class="s2">&#39;</span>
+<a id="__codelineno-26-20" name="__codelineno-26-20" href="#__codelineno-26-20"></a><span class="s2">        &quot;&quot;&quot;</span>
+<a id="__codelineno-26-21" name="__codelineno-26-21" href="#__codelineno-26-21"></a>        <span class="n">conexao</span> <span class="o">=</span> <span class="n">Conexoes</span><span class="p">(</span><span class="n">conexao</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ambiente</span><span class="p">)</span>
+<a id="__codelineno-26-22" name="__codelineno-26-22" href="#__codelineno-26-22"></a>        <span class="k">return</span> <span class="n">sql</span><span class="p">,</span> <span class="n">conexao</span><span class="o">.</span><span class="n">abrir_conexao</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="3-criar-arquivo-do-indicador">3️⃣ <strong>Criar Arquivo do Indicador</strong><a class="headerlink" href="#3-criar-arquivo-do-indicador" title="Permanent link">&para;</a></h4>
+<p>Crie arquivo padrão: <code>ID99_Nome_Indicador.py</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1"># ID99_Nome_Indicador.py</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">APOIO</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">auxiliar_querys</span><span class="w"> </span><span class="kn">import</span> <span class="n">MinhaNovaQuery</span>  <span class="c1"># sua query</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">GerarID99</span><span class="p">:</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ambiente</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data_execucao</span><span class="p">:</span> <span class="n">datetime</span><span class="p">):</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ID_INDICADOR</span> <span class="o">=</span> <span class="s1">&#39;99&#39;</span>
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">NOME_INDICADOR</span> <span class="o">=</span> <span class="s1">&#39;Nome do Novo Indicador&#39;</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">DATA_COMP</span> <span class="o">=</span> <span class="n">data_execucao</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m&#39;</span><span class="p">)</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ambiente</span> <span class="o">=</span> <span class="n">ambiente</span>
+<a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>
+<a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">gerar_indicador_99</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a>        <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a>            <span class="c1"># 1. Criar pasta de saída</span>
+<a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a>            <span class="n">PATH</span> <span class="o">=</span> <span class="n">APOIO</span><span class="o">.</span><span class="n">criar_pasta_indicador</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ID_INDICADOR</span><span class="p">)</span>
+<a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a>
+<a id="__codelineno-27-20" name="__codelineno-27-20" href="#__codelineno-27-20"></a>            <span class="c1"># 2. Executar query</span>
+<a id="__codelineno-27-21" name="__codelineno-27-21" href="#__codelineno-27-21"></a>            <span class="n">query</span> <span class="o">=</span> <span class="n">MinhaNovaQuery</span><span class="p">(</span><span class="n">ambiente</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ambiente</span><span class="p">)</span>
+<a id="__codelineno-27-22" name="__codelineno-27-22" href="#__codelineno-27-22"></a>            <span class="n">df</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">executar_query</span><span class="p">()</span>
+<a id="__codelineno-27-23" name="__codelineno-27-23" href="#__codelineno-27-23"></a>
+<a id="__codelineno-27-24" name="__codelineno-27-24" href="#__codelineno-27-24"></a>            <span class="c1"># 3. Processar dados</span>
+<a id="__codelineno-27-25" name="__codelineno-27-25" href="#__codelineno-27-25"></a>            <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-27-26" name="__codelineno-27-26" href="#__codelineno-27-26"></a>            <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+<a id="__codelineno-27-27" name="__codelineno-27-27" href="#__codelineno-27-27"></a>            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID_INDICADOR</span>
+<a id="__codelineno-27-28" name="__codelineno-27-28" href="#__codelineno-27-28"></a>            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;NM_INDICADOR&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">NOME_INDICADOR</span>
+<a id="__codelineno-27-29" name="__codelineno-27-29" href="#__codelineno-27-29"></a>
+<a id="__codelineno-27-30" name="__codelineno-27-30" href="#__codelineno-27-30"></a>            <span class="c1"># 4. Aplicar fórmula de cálculo (exemplo)</span>
+<a id="__codelineno-27-31" name="__codelineno-27-31" href="#__codelineno-27-31"></a>            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;MINHA_COLUNA_CALCULO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;COLUNA_A&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;COLUNA_B&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+<a id="__codelineno-27-32" name="__codelineno-27-32" href="#__codelineno-27-32"></a>
+<a id="__codelineno-27-33" name="__codelineno-27-33" href="#__codelineno-27-33"></a>            <span class="c1"># 5. Salvar arquivo Excel</span>
+<a id="__codelineno-27-34" name="__codelineno-27-34" href="#__codelineno-27-34"></a>            <span class="n">timestamp</span> <span class="o">=</span> <span class="n">APOIO</span><span class="o">.</span><span class="n">data_hora_geracao_arquivo</span><span class="p">()</span>
+<a id="__codelineno-27-35" name="__codelineno-27-35" href="#__codelineno-27-35"></a>            <span class="n">nome_arquivo</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;ID </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">ID_INDICADOR</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">NOME_INDICADOR</span><span class="si">}</span><span class="s2"> - COMPETENCIA </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">DATA_COMP</span><span class="si">}</span><span class="s2"> - gerado em </span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">.xlsx&quot;</span>
+<a id="__codelineno-27-36" name="__codelineno-27-36" href="#__codelineno-27-36"></a>            <span class="n">arquivo_saida</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">PATH</span><span class="si">}</span><span class="se">\\</span><span class="si">{</span><span class="n">nome_arquivo</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-27-37" name="__codelineno-27-37" href="#__codelineno-27-37"></a>
+<a id="__codelineno-27-38" name="__codelineno-27-38" href="#__codelineno-27-38"></a>            <span class="n">df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">arquivo_saida</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;INDICADOR&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-27-39" name="__codelineno-27-39" href="#__codelineno-27-39"></a>
+<a id="__codelineno-27-40" name="__codelineno-27-40" href="#__codelineno-27-40"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✓ ID99 gerado com sucesso: </span><span class="si">{</span><span class="n">arquivo_saida</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-27-41" name="__codelineno-27-41" href="#__codelineno-27-41"></a>            <span class="k">return</span> <span class="n">df</span>
+<a id="__codelineno-27-42" name="__codelineno-27-42" href="#__codelineno-27-42"></a>
+<a id="__codelineno-27-43" name="__codelineno-27-43" href="#__codelineno-27-43"></a>        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a id="__codelineno-27-44" name="__codelineno-27-44" href="#__codelineno-27-44"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✗ Erro ao gerar ID99: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-27-45" name="__codelineno-27-45" href="#__codelineno-27-45"></a>            <span class="k">raise</span>
+</code></pre></div>
+<h4 id="4-adicionar-indicador-ao-orquestrador">4️⃣ <strong>Adicionar Indicador ao Orquestrador</strong><a class="headerlink" href="#4-adicionar-indicador-ao-orquestrador" title="Permanent link">&para;</a></h4>
+<p>Edite <a href="gerar_todos_indicadores.py">gerar_todos_indicadores.py</a> e adicione:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="c1"># gerar_todos_indicadores.py - dentro do loop</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ID99_Nome_Indicador</span><span class="w"> </span><span class="kn">import</span> <span class="n">GerarID99</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="c1"># ... dentro do loop de datas ...</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gerando ID99...&quot;</span><span class="p">)</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>    <span class="n">indicador</span> <span class="o">=</span> <span class="n">GerarID99</span><span class="p">(</span><span class="n">ambiente</span><span class="o">=</span><span class="n">AMBIENTE</span><span class="p">,</span> <span class="n">data_execucao</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">indicador</span><span class="o">.</span><span class="n">gerar_indicador_99</span><span class="p">()</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>    <span class="n">lista_sucessos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ID99 - </span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>    <span class="n">lista_erros</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ID99 - </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="5-testar-localmente">5️⃣ <strong>Testar Localmente</strong><a class="headerlink" href="#5-testar-localmente" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1"># Terminal</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="s2">from ID99_Nome_Indicador import GerarID99</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="s2">from datetime import datetime</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="s2">ind = GerarID99(ambiente=&#39;producao_i4&#39;, data_execucao=datetime(2025, 4, 1))</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="s2">df = ind.gerar_indicador_99()</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="s2">print(f&#39;Sucesso! {len(df)} linhas geradas&#39;)</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="s2">&quot;</span>
+</code></pre></div>
+<h4 id="6-documentar-no-readme">6️⃣ <strong>Documentar no README</strong><a class="headerlink" href="#6-documentar-no-readme" title="Permanent link">&para;</a></h4>
+<p>Adicione uma seção ao README (este arquivo) documentando:
+- Objetivo
+- Fórmula
+- Variáveis entrada/saída
+- Arquivo gerado</p>
+<h4 id="checklist-de-implementacao">✅ <strong>Checklist de Implementação</strong><a class="headerlink" href="#checklist-de-implementacao" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] Requisitos definidos e validados</li>
+<li>[ ] Query testada no SQL Server</li>
+<li>[ ] Arquivo <code>ID99_*.py</code> criado e testado localmente</li>
+<li>[ ] Classe herda de <code>Query</code> ou implementa interface consistente</li>
+<li>[ ] Método obrigatório: <code>gerar_indicador_99()</code> retorna <code>pd.DataFrame</code></li>
+<li>[ ] Arquivo Excel salvo em <code>\\awsseg130006\ACTIO\ID - 99\</code></li>
+<li>[ ] Adicionado ao orquestrador <code>gerar_todos_indicadores.py</code></li>
+<li>[ ] Testado em produção com período pequeno</li>
+<li>[ ] Documentado neste README.md</li>
+<li>[ ] Commit e push para repositório</li>
+</ul>
+</details>
+<hr />
+<h2 id="fluxogramas-dos-principais-processos">📈 Fluxogramas dos Principais Processos<a class="headerlink" href="#fluxogramas-dos-principais-processos" title="Permanent link">&para;</a></h2>
+<h3 id="1-arquitetura-geral-classes-e-hierarquia">1️⃣ Arquitetura Geral (Classes e Hierarquia)<a class="headerlink" href="#1-arquitetura-geral-classes-e-hierarquia" title="Permanent link">&para;</a></h3>
+<details>
+<summary>📊 Expandir Arquitetura</summary>
+<pre class="mermaid"><code>graph TD
+    A["&lt;b&gt;Conexões&lt;/b&gt;&lt;br/&gt;conexao_banco.py&lt;br/&gt;---&lt;br/&gt;Factory Pattern:&lt;br/&gt;conexao_producao_i4()"]
+
+    B["&lt;b&gt;Query ABC&lt;/b&gt;&lt;br/&gt;Classe Base Abstrata&lt;br/&gt;---&lt;br/&gt;• query() abstractmethod&lt;br/&gt;• executar_query()&lt;br/&gt;• abrir_conexao()"]
+
+    C["&lt;b&gt;Queries Concretas&lt;/b&gt;&lt;br/&gt;---&lt;br/&gt;QdeApolicesAtivas&lt;br/&gt;DimProdutoRamo&lt;br/&gt;MovimentacaoSinistros&lt;br/&gt;...outras"]
+
+    D["&lt;b&gt;APOIO.py&lt;/b&gt;&lt;br/&gt;Utilitários&lt;br/&gt;---&lt;br/&gt;• datas&lt;br/&gt;• pastas&lt;br/&gt;• fórmulas cálculo"]
+
+    E["&lt;b&gt;GerarID11..ID39&lt;/b&gt;&lt;br/&gt;Geradores de Indicador&lt;br/&gt;---&lt;br/&gt;• ID11: Cross Sell&lt;br/&gt;• ID131: Renovação RCO&lt;br/&gt;• ID16/17/26/39: Sinistros"]
+
+    F["&lt;b&gt;gerar_todos_indicadores.py&lt;/b&gt;&lt;br/&gt;Orquestrador&lt;br/&gt;---&lt;br/&gt;Loop mensal → 7 IDs&lt;br/&gt;Captura erros&lt;br/&gt;Relatório final"]
+
+    G["&lt;b&gt;\\\\awsseg130006\\ACTIO\\&lt;/b&gt;&lt;br/&gt;Saída: Arquivos Excel&lt;br/&gt;---&lt;br/&gt;ID - 11\\&lt;br/&gt;ID - 131\\&lt;br/&gt;...ID - 39\\"]
+
+    A --&gt;|"Factory"| B
+    B --&gt;|"Herança"| C
+    D -.-&gt;|"Importado por"| E
+    C --&gt;|"Usa"| E
+    E --&gt;|"Orquestra"| F
+    F --&gt;|"Gera"| G
+
+    style A fill:#e1f5ff
+    style B fill:#fff3e0
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e8f5e9
+    style F fill:#fce4ec
+    style G fill:#fffde7</code></pre>
+</details>
+<h3 id="2-orquestracao-principal-gerar_todos_indicadorespy">2️⃣ Orquestração Principal (gerar_todos_indicadores.py)<a class="headerlink" href="#2-orquestracao-principal-gerar_todos_indicadorespy" title="Permanent link">&para;</a></h3>
+<details>
+<summary>🔄 Expandir Fluxo de Orquestração</summary>
+<pre class="mermaid"><code>graph TD
+    A["INÍCIO&lt;br/&gt;Ambiente: producao_i4&lt;br/&gt;Período: 2025-04-01 a 2025-04-30"]
+
+    B["Loop: Para cada Data mensal"]
+
+    C["Executar ID11&lt;br/&gt;Cross Sell"]
+    D["Executar ID131&lt;br/&gt;Renovação RCO"]
+    E["Executar ID17&lt;br/&gt;Recuperação Acum"]
+    F["Executar ID17m&lt;br/&gt;Recuperação Mensal"]
+    G["Executar ID26&lt;br/&gt;Prazo Médio"]
+    H["Executar ID39&lt;br/&gt;Custo Médio"]
+    I["Executar ID16&lt;br/&gt;Frequência"]
+
+    J["Capturar Sucesso?"]
+    K["Adicionar a lista_sucessos"]
+    L["Adicionar a lista_erros"]
+
+    M["Próxima data?"]
+
+    N["Gerar Relatório Final&lt;br/&gt;---&lt;br/&gt;✓ Sucessos&lt;br/&gt;✗ Erros&lt;br/&gt;⏱ Duração&lt;br/&gt;🕐 Horários"]
+
+    O["FIM"]
+
+    A --&gt; B
+    B --&gt; C
+    C --&gt; D --&gt; E --&gt; F --&gt; G --&gt; H --&gt; I
+
+    I --&gt; J
+    J --&gt;|"Sucesso"| K
+    J --&gt;|"Erro"| L
+
+    K --&gt; M
+    L --&gt; M
+
+    M --&gt;|"Sim"| B
+    M --&gt;|"Não"| N
+
+    N --&gt; O
+
+    style A fill:#e3f2fd
+    style B fill:#fff9c4
+    style C fill:#f1f8e9
+    style D fill:#f1f8e9
+    style E fill:#f1f8e9
+    style F fill:#f1f8e9
+    style G fill:#f1f8e9
+    style H fill:#f1f8e9
+    style I fill:#f1f8e9
+    style J fill:#ffe0b2
+    style K fill:#c8e6c9
+    style L fill:#ffccbc
+    style N fill:#f0f4c3
+    style O fill:#e0e0e0</code></pre>
+</details>
+<h3 id="3-pipeline-generico-de-indicador">3️⃣ Pipeline Genérico de Indicador<a class="headerlink" href="#3-pipeline-generico-de-indicador" title="Permanent link">&para;</a></h3>
+<details>
+<summary>⚙️ Expandir Pipeline de Processamento</summary>
+<pre class="mermaid"><code>graph TD
+    A["Iniciar GerarID[X]&lt;br/&gt;ambiente: str&lt;br/&gt;data_execucao: datetime"]
+
+    B["Criar Pasta de Saída&lt;br/&gt;APOIO.criar_pasta_indicador()"]
+
+    C["Instanciar Query Específica&lt;br/&gt;Ex: QdeApolicesAtivas Query"]
+
+    D["Executar Query SQL&lt;br/&gt;query.executar_query()&lt;br/&gt;Retorna: pandas.DataFrame"]
+
+    E["Processar DataFrame&lt;br/&gt;---&lt;br/&gt;• fillna0&lt;br/&gt;• Normalizar colunas&lt;br/&gt;• Aplicar filtros&lt;br/&gt;• Calcular métricas"]
+
+    F["Adicionar Metadados&lt;br/&gt;---&lt;br/&gt;• df['ID']&lt;br/&gt;• df['NM_INDICADOR']&lt;br/&gt;• df['DT_CORTE']"]
+
+    G["Aplicar Fórmula de Cálculo&lt;br/&gt;Ex: df['FREQ'] = A/B * 100"]
+
+    H["Gerar Timestamp&lt;br/&gt;APOIO.data_hora_geracao_arquivo()"]
+
+    I["Salvar em Excel&lt;br/&gt;\\\\awsseg130006\\ACTIO\\ID - X\\&lt;br/&gt;df.to_excel()"]
+
+    J["Retornar DataFrame&lt;br/&gt;para Orquestrador"]
+
+    K["FIM"]
+
+    A --&gt; B --&gt; C --&gt; D --&gt; E --&gt; F --&gt; G --&gt; H --&gt; I --&gt; J --&gt; K
+
+    style A fill:#bbdefb
+    style B fill:#fff9c4
+    style C fill:#ffe0b2
+    style D fill:#c8e6c9
+    style E fill:#f1f8e9
+    style F fill:#f1f8e9
+    style G fill:#e1bee7
+    style H fill:#b3e5fc
+    style I fill:#ffccbc
+    style J fill:#f0f4c3
+    style K fill:#e0e0e0</code></pre>
+</details>
+<h3 id="4-padrao-de-desenvolvimento-adicionar-novo-indicador">4️⃣ Padrão de Desenvolvimento - Adicionar Novo Indicador<a class="headerlink" href="#4-padrao-de-desenvolvimento-adicionar-novo-indicador" title="Permanent link">&para;</a></h3>
+<details>
+<summary>🚀 Expandir Guia de Implementação</summary>
+<pre class="mermaid"><code>graph TD
+    A["1️⃣ Definir Requisitos&lt;br/&gt;Objetivo + Fórmula&lt;br/&gt;Variáveis entrada/saída"]
+
+    B["2️⃣ Criar Query SQL&lt;br/&gt;Testar no SQL Server&lt;br/&gt;Validar resultados"]
+
+    C["3️⃣ Criar Classe Query&lt;br/&gt;Herdar de Query ABC&lt;br/&gt;Implementar: query()"]
+
+    D["4️⃣ Criar GerarIDX.py&lt;br/&gt;Herdar de template&lt;br/&gt;Implementar: gerar_indicador_X"]
+
+    E["5️⃣ Processar DataFrame&lt;br/&gt;Aplicar fórmula&lt;br/&gt;Adicionar metadados"]
+
+    F["6️⃣ Persistir em Excel&lt;br/&gt;Salvar em padrão&lt;br/&gt;Timestamp incluso"]
+
+    G["7️⃣ Adicionar ao Orquestrador&lt;br/&gt;Import no gerar_todos_indicadores.py&lt;br/&gt;Incluir no loop"]
+
+    H["8️⃣ Testar Localmente&lt;br/&gt;Executar para data teste&lt;br/&gt;Validar arquivo de saída"]
+
+    I["9️⃣ Testar em Produção&lt;br/&gt;Período pequeno&lt;br/&gt;Verificar performance"]
+
+    J["🔟 Documentar &amp; Commit&lt;br/&gt;Atualizar README&lt;br/&gt;Push para repositório"]
+
+    K["✅ CONCLUÍDO&lt;br/&gt;Indicador pronto&lt;br/&gt;para uso"]
+
+    A --&gt; B --&gt; C --&gt; D --&gt; E --&gt; F --&gt; G --&gt; H --&gt; I --&gt; J --&gt; K
+
+    style A fill:#c5cae9
+    style B fill:#b3e5fc
+    style C fill:#fff9c4
+    style D fill:#ffe0b2
+    style E fill:#ffccbc
+    style F fill:#f1f8e9
+    style G fill:#f0f4c3
+    style H fill:#e1bee7
+    style I fill:#b2ebf2
+    style J fill:#dcedc8
+    style K fill:#c8e6c9</code></pre>
+</details>
+<h2 id="troubleshooting">🆘 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<details>
+<summary>🔍 Expandir Guia de Troubleshooting</summary>
+<h3 id="erro-falha-na-conexao-sql-server">Erro: "Falha na conexão SQL Server"<a class="headerlink" href="#erro-falha-na-conexao-sql-server" title="Permanent link">&para;</a></h3>
+<p><strong>Mensagem típica:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>[ODBC Driver 18 for SQL Server] Named Pipe Provider: Could not open a connection to SQL Server
+</code></pre></div></p>
+<p><strong>Causas possíveis:</strong>
+1. ❌ SQL Server não está acessível em 10.101.2.74:1433
+2. ❌ Driver ODBC não instalado ou versão incorreta
+3. ❌ Credenciais em <code>.env</code> estão incorretas</p>
+<p><strong>Solução:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># 1. Validar conectividade (PowerShell)</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>Test-NetConnection<span class="w"> </span>-ComputerName<span class="w"> </span><span class="m">10</span>.101.2.74<span class="w"> </span>-Port<span class="w"> </span><span class="m">1433</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="c1"># 2. Verificar ODBC driver instalado</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>Get-OdbcDriver<span class="w"> </span><span class="p">|</span><span class="w"> </span>Select<span class="w"> </span>Name
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="c1"># 3. Validar .env tem credenciais corretas</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="c1"># Editar: .env</span>
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a><span class="nv">USER_PROD</span><span class="o">=</span>seu_usuario
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a><span class="nv">PASSWORD_PROD</span><span class="o">=</span>sua_senha
+<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>
+<a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a><span class="c1"># 4. Testar conexão com pyodbc</span>
+<a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span>
+<a id="__codelineno-31-14" name="__codelineno-31-14" href="#__codelineno-31-14"></a><span class="s2">import pyodbc</span>
+<a id="__codelineno-31-15" name="__codelineno-31-15" href="#__codelineno-31-15"></a><span class="s2">con = pyodbc.connect(&#39;Driver={ODBC Driver 18 for SQL Server};Server=10.101.2.74;Database=re_i4pro;UID=usuario;PWD=senha;Encrypt=no&#39;)</span>
+<a id="__codelineno-31-16" name="__codelineno-31-16" href="#__codelineno-31-16"></a><span class="s2">print(&#39;✓ Conexão OK&#39;)</span>
+<a id="__codelineno-31-17" name="__codelineno-31-17" href="#__codelineno-31-17"></a><span class="s2">&quot;</span>
+</code></pre></div></p>
+<hr />
+<h3 id="erro-permissao-negada-ao-salvar-arquivo-excel">Erro: "Permissão negada ao salvar arquivo Excel"<a class="headerlink" href="#erro-permissao-negada-ao-salvar-arquivo-excel" title="Permanent link">&para;</a></h3>
+<p><strong>Mensagem típica:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>PermissionError: [Errno 13] Permission denied: &#39;\\awsseg130006\ACTIO\ID - 11\arquivo.xlsx&#39;
+</code></pre></div></p>
+<p><strong>Causas possíveis:</strong>
+1. ❌ Caminho de rede não acessível
+2. ❌ Permissões insuficientes no compartilhamento
+3. ❌ Arquivo aberto em outra aplicação (Excel)</p>
+<p><strong>Solução:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="c1"># 1. Testar acesso ao compartilhamento (PowerShell)</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>Test-Path<span class="w"> </span><span class="se">\\</span>awsseg130006<span class="se">\A</span>CTIO<span class="se">\</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="c1"># 2. Tentar criar pasta manualmente</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>New-Item<span class="w"> </span>-Path<span class="w"> </span><span class="s2">&quot;\\awsseg130006\ACTIO\ID - 11\&quot; -ItemType Directory -Force</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="s2"># 3. Fechar arquivo Excel se aberto</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a><span class="s2"># Arquivo travado = não pode ser overwritten</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a><span class="s2"># 4. Testar escrita simples</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a><span class="s2">python -c &quot;</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>import<span class="w"> </span>pandas<span class="w"> </span>as<span class="w"> </span>pd
+<a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a><span class="nv">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>pd.DataFrame<span class="o">({</span><span class="s1">&#39;col1&#39;</span>:<span class="w"> </span><span class="o">[</span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span><span class="o">]</span>,<span class="w"> </span><span class="s1">&#39;col2&#39;</span>:<span class="w"> </span><span class="o">[</span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span><span class="o">]})</span>
+<a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>df.to_excel<span class="o">(</span>r<span class="s1">&#39;\\awsseg130006\ACTIO\teste.xlsx&#39;</span>,<span class="w"> </span><span class="nv">index</span><span class="o">=</span>False<span class="o">)</span>
+<a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>print<span class="o">(</span><span class="s1">&#39;✓ Arquivo salvo com sucesso&#39;</span><span class="o">)</span>
+<a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a><span class="s2">&quot;</span>
+</code></pre></div></p>
+<hr />
+<h3 id="erro-coluna-nao-encontrada-em-select">Erro: "Coluna não encontrada em SELECT"<a class="headerlink" href="#erro-coluna-nao-encontrada-em-select" title="Permanent link">&para;</a></h3>
+<p><strong>Mensagem típica:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>pyodbc.ProgrammingError: (&#39;42S22&#39;, &quot;[42S22] [SQL Server]
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>Invalid column name &#39;NM_COLUNA_INEXISTENTE&#39;. [SQL Server]&quot;)
+</code></pre></div></p>
+<p><strong>Causas possíveis:</strong>
+1. ❌ Query SQL referencia coluna que não existe
+2. ❌ Nome da coluna com tipografia errada
+3. ❌ Alias de tabela incorreto</p>
+<p><strong>Solução:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c1"># 1. Testar Query SQL diretamente no SQL Server Management Studio</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="c1"># Copiar SQL do arquivo .py e executar em SSMS</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="c1"># 2. Validar nome das colunas:</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>SELECT<span class="w"> </span>COLUMN_NAME<span class="w"> </span>FROM<span class="w"> </span>INFORMATION_SCHEMA.COLUMNS
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>WHERE<span class="w"> </span><span class="nv">TABLE_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;MINHA_TABELA&#39;</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a><span class="c1"># 3. Se necessário, atualizar arquivo [ID X].py com coluna correta</span>
+</code></pre></div></p>
+<hr />
+<h3 id="erro-loop-nunca-termina-execucao-muito-lenta">Erro: "Loop nunca termina / execução muito lenta"<a class="headerlink" href="#erro-loop-nunca-termina-execucao-muito-lenta" title="Permanent link">&para;</a></h3>
+<p><strong>Causas possíveis:</strong>
+1. ❌ Query SQL muito pesada (scans full table)
+2. ❌ Volume de dados gigantesco no DataFrame
+3. ❌ Loop infinito em processamento</p>
+<p><strong>Solução:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="c1"># 1. Adicionar profiling de tempo</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>import<span class="w"> </span><span class="nb">time</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="nv">t0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>time.time<span class="o">()</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="c1"># ... seu código ...</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="nv">t1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>time.time<span class="o">()</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>print<span class="o">(</span>f<span class="s2">&quot;Duração: {t1-t0:.2f}s&quot;</span><span class="o">)</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a><span class="c1"># 2. Otimizar Query SQL adicionar índices, filtros</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a><span class="c1"># 3. Limitar volume ex: últimos 12 meses em vez de histórico todo</span>
+<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="c1"># 4. Usar TQDM para progresso visual</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a>from<span class="w"> </span>tqdm<span class="w"> </span>import<span class="w"> </span>tqdm
+<a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span>tqdm<span class="o">(</span>range<span class="o">(</span><span class="m">1000</span><span class="o">))</span>:
+<a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a><span class="w">    </span><span class="c1"># operação</span>
+<a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a><span class="w">    </span>pass
+</code></pre></div></p>
+</details>
+<h2 id="referencias-e-recursos">📚 Referências e Recursos<a class="headerlink" href="#referencias-e-recursos" title="Permanent link">&para;</a></h2>
+<h3 id="localizacao-de-arquivos-de-suporte">Localização de Arquivos de Suporte<a class="headerlink" href="#localizacao-de-arquivos-de-suporte" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Diretório</th>
+<th>Conteúdo</th>
+<th>Utilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ARQUIVOS_APOIO_PROJETO/</code></td>
+<td>Mapeamento de IDs, layouts, pendências</td>
+<td>Documentação estrutura dados</td>
+</tr>
+<tr>
+<td><code>RIC_Falconi/</code></td>
+<td>Queries SQL complementares</td>
+<td>Exploração de dados</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arquivos-de-suporte">Arquivos de Suporte<a class="headerlink" href="#arquivos-de-suporte" title="Permanent link">&para;</a></h3>
+<h4 id="arquivos_apoio_projeto">📊 <code>ARQUIVOS_APOIO_PROJETO/</code><a class="headerlink" href="#arquivos_apoio_projeto" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>ID_INDICADOR.xlsx</code></strong> — Mapeamento de IDs a nomes de indicadores</li>
+<li><strong><code>LAYOUT_IMPORTACAO.xlsx</code></strong> — Especificação do layout esperado colunas, tipos, validações</li>
+<li><strong><code>Pendências Dados Tecnologia.xlsx</code></strong> — Rastreamento de issues e melhorias pendentes</li>
+</ul>
+<h4 id="ric_falconi">📊 <code>RIC_Falconi/</code><a class="headerlink" href="#ric_falconi" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>Clientes Ativos.sql</code></strong> — Extrai clientes com status ativo no período</li>
+<li><strong><code>EMISSAO_BANCA.sql</code></strong> — Emissões via canais bancários</li>
+<li><strong><code>Ticket Médio.sql</code></strong> — Valor médio de transação por cliente</li>
+<li><strong><code>teste1.sql</code></strong> — Query experimental</li>
+</ul>
+<h3 id="queries-sql-principais-raiz">Queries SQL Principais Raiz<a class="headerlink" href="#queries-sql-principais-raiz" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>Indicador</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QUERY_CROSS-SELL.sql</code></td>
+<td>ID11</td>
+<td>Base de cross-sell por cliente</td>
+</tr>
+<tr>
+<td><code>QUERY_CROSS-SELL_APOLICES.sql</code></td>
+<td>ID11</td>
+<td>Variação: foco em apólices</td>
+</tr>
+<tr>
+<td><code>QUERY_RENOVACAO_RCO.sql</code></td>
+<td>ID131</td>
+<td>Base de renovação RCO</td>
+</tr>
+<tr>
+<td><code>QUERY_RENOVACAO_RCO_APOL.sql</code></td>
+<td>ID131</td>
+<td>Variação: por apólice</td>
+</tr>
+<tr>
+<td><code>QUERY_RENOVACAO_RCO_CHASSI.sql</code></td>
+<td>ID131</td>
+<td>Variação: por chassis/frota</td>
+</tr>
+</tbody>
+</table>
+<!-- ### Documentação Externa
+
+- 📖 **[Pandas Documentation](https://pandas.pydata.org/)** — Manipulação de DataFrames
+- 📖 **[pyodbc Documentation](https://github.com/mkleehammer/pyodbc)** — Conexão SQL Server
+- 📖 **[SQL Server Docs](https://learn.microsoft.com/en-us/sql/sql-server/)** — Referência SQL
+- 📖 **[Python-dateutil](https://dateutil.readthedocs.io/)** — Manipulação de datas -->
+
+<!-- ---
+
+## 📝 Contribuição
+
+### Como Contribuir
+
+1. **Crie uma branch** para sua feature:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/novo-indicador
+</code></pre></div>
+
+2. **Implemente seguindo o padrão**:
+   - Crie arquivo `ID[X]_Nome.py`
+   - Herde de `Query` ou siga template
+   - Documente no README
+
+3. **Teste localmente**:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>python<span class="w"> </span>gerar_indicador_individualmente.py
+</code></pre></div>
+
+4. **Commit com mensagem clara**:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Feat: Adicionar indicador ID99 - Novo Indicador&quot;</span>
+</code></pre></div>
+
+5. **Push e Pull Request**:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature/novo-indicador
+</code></pre></div>
+
+### Padrões de Código
+
+- 🐍 **Python:** PEP 8 4 espaços indentação
+- 📋 **Nomes:** Descritivos e em inglês exceto nomes de indicadores
+- 📝 **Docstrings:** Todas as classes e funções devem ter docstrings
+- ✅ **Commits:** Usar convenção [Conventional Commits](https://www.conventionalcommits.org/) -->
+
+<hr />
+<h2 id="contato">📞 Contato<a class="headerlink" href="#contato" title="Permanent link">&para;</a></h2>
+<p>Para dúvidas, sugestões ou reportar problemas:</p>
+<table>
+<thead>
+<tr>
+<th>Canal</th>
+<th>Informação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Email</strong></td>
+<td><a href="mailto:thiago.ramalho@kovr.com.br">thiago.ramalho@kovr.com.br</a></td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td><a href="mailto:usrpbi@kovr.com.br">usrpbi@kovr.com.br</a></td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td><a href="mailto:lucas.silva@kev.tech">lucas.silva@kev.tech</a></td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td><a href="mailto:matheus.oliveira@kovr.com.br">matheus.oliveira@kovr.com.br</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
